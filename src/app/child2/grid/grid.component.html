@@ -1,0 +1,20 @@
+<header>
+    <h1 [hidden]="true">Component2</h1>
+</header>
+<main>
+<button class="float-right" (click)="switchGridListView()">Grid/List View</button>
+<label for="">Price Filter
+    <select aria-placeholder="Select category to filter" name="price" id="" [(ngModel)]="priceFilter" (change)="priceChange()" required >
+        <option value="" disabled selected>Choose a drink</option>
+        <option value="1" >Low to High</option>
+        <option value="2" >High to Low</option>
+    </select>
+    </label>
+
+
+<div class="flex-container">
+    <div [ngClass]="isGrid ? 'grid' : 'list'" *ngFor="let item of items">
+        {{item.price}}
+    </div>
+</div>
+</main>

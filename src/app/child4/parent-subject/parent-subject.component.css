@@ -1,0 +1,19 @@
+.outer {
+    border: 2px solid black;
+    margin:8px;
+}
+
+.inner {
+    border: 1px solid black;
+}
+.pad16{
+    padding: 12px
+}
+.marR4{
+    margin-right: 6px;
+}
+@media screen and (max-width:600px)  {
+    .margintop16{
+        margin-top:16px;
+    }   
+}

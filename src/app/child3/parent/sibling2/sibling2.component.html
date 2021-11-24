@@ -1,0 +1,24 @@
+<div class="comp">
+    <form [formGroup]="formGroup" >
+        <div class="row">
+            <div class="col-lg-4"> <label for="timer">Enter Timer Limit</label></div>
+           <div class="col-lg-4"><input id="timer" name="timer" type="number" formControlName="timer" class="marR4" >
+           </div>
+            
+        </div>
+        <div class="row marTop4">
+            <div class="col-lg-4 col-lg-offset-4">
+                <button type="button" (click)="startPauseHandler()" >Start / Pause</button>
+                <button class="floatRight" type="button" (click)="resetHandler()" >Reset</button>
+            </div>
+            
+                
+        </div>
+    </form>
+    
+    <div class="row" *ngFor="let time of state?.timeLogs" >
+        <div *ngIf="!time.start">
+            Paused at {{time.countDown}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<header>
+    <h1 [hidden]="true">component3</h1>
+</header>
+<main>
+    <div class="container outer">
+
+        <div class="row pad16">
+            <div class="col-lg-4 inner marR4">
+                <app-sibling1 [state]="state"></app-sibling1>
+            </div>
+            <div class="col-lg-7 inner marR4 margintop16">
+                <app-sibling2
+                    [state]="state"
+                    (startPause)="startPause($event)"
+                    (reset)="reset()"></app-sibling2>
+            </div>
+        </div>
+        <div class="row pad16">
+            <div class="col-lg-4">
+                <app-sibling3 [state]="state"></app-sibling3>
+            </div>
+            <div class="col-lg-8">
+                <app-sibling4 [state]="state"></app-sibling4>
+            </div>
+        </div>
+       
+        
+    </div>
+</main>

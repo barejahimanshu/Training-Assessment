@@ -1,0 +1,31 @@
+<header>
+    <h1 [hidden]="true">Heading</h1>
+</header>
+
+
+<main class="container mr16">
+    <div class="table-responsive">
+        <table class="table table-bordered border mt-1">
+            <thead>
+                <tr>
+                    <ng-container *ngFor="let ele of headings">
+                        <th scope="col" [appSort]="dataList" [initialList]="initialList" data-order="asc" [attr.data-name]="ele">
+                            {{ele}}
+                        </th>
+                    </ng-container>
+    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of dataList">
+                    <td>{{data.Name}}</td>
+                    <td>{{data.Class}}</td>
+                    <td>{{data.Section}}</td>
+                    <td>{{data.Subject1}}</td>
+                    <td>{{data.Subject2}}</td>
+                    <td>{{data.Subject3}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>

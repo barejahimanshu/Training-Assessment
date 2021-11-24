@@ -1,0 +1,13 @@
+<header>
+    <h1 [hidden]="true">Component6</h1>
+</header>
+<main>
+<div class="wrap">
+    <div *ngFor="let ele of arr; let ind = index" class="inner">
+        <div *ngIf="ind === arr.length-1" >
+            <div appInfinite (deferLoad)="loadMore()"></div>
+        </div>
+        <button (click)="clickHandler(ele)">Button</button>
+    </div>
+</div>
+</main>
